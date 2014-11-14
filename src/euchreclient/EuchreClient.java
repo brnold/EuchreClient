@@ -6,19 +6,40 @@
 
 package euchreclient;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
 /**
  *
  * @author Benjamin
  */
 public class EuchreClient
 {
-
+    String name;
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args)
+    void EuchreClient()
     {
-        // TODO code application logic here
+        name = "fred";
+        System.out.println("Object created");
     }
+    
+    boolean openPort(String ip, int port)
+    {
+        try {
+            Socket kkSocket = new Socket(ip, port);
+            PrintWriter out = new PrintWriter(kkSocket.getOutputStream(), true);
+            BufferedReader in = new BufferedReader(
+            new InputStreamReader(kkSocket.getInputStream()));
+        }catch(Exception e){
+            System.out.println(e);
+            return false;
+         }
+        return true;
+    }
+    
     
 }
