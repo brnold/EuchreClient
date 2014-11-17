@@ -118,6 +118,12 @@ public class EuchreClientGUI extends javax.swing.JFrame
         client.setName(jTextField3.getText());
         
         client.openPort(ip, port);
+        
+        client.sendString();
+        
+        while(1 == 1){
+        client.workSocket();
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
