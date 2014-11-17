@@ -85,9 +85,9 @@ public class EuchreClientGUI extends javax.swing.JFrame
                             .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
+                        .addGap(77, 77, 77)
                         .addComponent(jButton1)))
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,9 +102,9 @@ public class EuchreClientGUI extends javax.swing.JFrame
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -114,6 +114,8 @@ public class EuchreClientGUI extends javax.swing.JFrame
     {//GEN-HEADEREND:event_jButton1ActionPerformed
         String ip = jTextField1.getText();
         int port =  Integer.parseInt(jTextField2.getText());
+        
+        client.setName(jTextField3.getText());
         
         client.openPort(ip, port);
     }//GEN-LAST:event_jButton1ActionPerformed

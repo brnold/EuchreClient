@@ -33,9 +33,16 @@ public class EuchreClient
     /**
      * @param args the command line arguments
      */
+    
+    void setName(String name)
+    {
+        this.name = name;
+    }
+    
+    
     void EuchreClient()
     {
-        name = "fred";
+        name = null;
         System.out.println("Object created");
     }
 
@@ -51,6 +58,7 @@ public class EuchreClient
             //InputStream input = s.getInputStream();
             objectin = new ObjectInputStream(s.getInputStream());
             
+            objectOut.writeObject(name);
             
 
       //OutputStream output = s.getOutputStream();
@@ -71,6 +79,8 @@ public class EuchreClient
         }
         return true;
     }
+    
+  
     
     public void workSocket()
     {
