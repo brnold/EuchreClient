@@ -23,6 +23,8 @@ import java.util.logging.Logger;
  * @author Benjamin
  */
 public class EuchreClient {
+    
+    //Hello world
 
     String name;
     Object o;
